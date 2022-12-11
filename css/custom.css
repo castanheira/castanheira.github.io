@@ -25,20 +25,21 @@ html, body {
 	font-family: sans-serif;
 	font-size: 10px;
 	letter-spacing: 0.8px;
-	line-height: 1.5;
-	border: 2px outset;
+	border: 1px solid;
 	padding: 4px;
-	margin: 40px 0px 30px 20px;
+	margin-top: 20px;
+	margin-left:20px;
+	margin-bottom: 20px;
+  margin-right:10px;
 	background-color: white;
 }
 .navbar-brand:hover {
 	color: #000000;
-	text-decoration: line-through;
+	/*text-decoration: line-through;*/
 }
 .project_header {
 	position: relative;
 	margin: 0 auto;
-	margin-bottom: 0px;
 	z-index: 99;
 	margin-bottom: 30px;
 }
@@ -52,7 +53,7 @@ html, body {
 	font-size: 10px;
 	letter-spacing: 0.8px;
 	line-height: 1.5;
-	border: 2px outset;
+	border: 1px solid;
 	padding: 4px;
 	margin: 0px;
 }
@@ -126,23 +127,29 @@ Thumbnails - Columns - Content
 	background-color: transparent;
 }
 .col-4, .col-nav {
-	width: 85%;
+	width: 100%;
 	padding: 10px;
 }
 .image, .thumb {
 	display: block;
 	width: 100%;
 	height:auto;
+	
 }
 .image img, .thumb img {
 	display: block;
 	width: 100%;
-	opacity: 1;
 	height:auto;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+		
+  	filter: grayscale(100%);
+
 }
-/*.thumb:hover img {
-  opacity: 0.5;
-}*/
+.thumb:hover img {
+	
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(40%);
+}
 .caption {
 	position: absolute;
 	width: 80%;
@@ -150,10 +157,6 @@ Thumbnails - Columns - Content
 	top: 50%;
 	left: 50%;
 	margin-right: -50%;
-	-ms-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
@@ -169,20 +172,54 @@ Thumbnails - Columns - Content
 	font-size: 10px;
 	letter-spacing: 0.8px;
 	line-height: 1.5;
-	border: 2px outset;
-	padding: 4px;
+	border: 1px solid;
+	padding: 6px;
+	opacity: 100%;
 }
+
 .col-4 a:visited .caption {
-	text-decoration: line-through;
-	border: dashed;
-	border-color: black;
+	
+
 }
 .col-4 a:hover .caption {}
 .col-4 a:hover .caption span {
-	text-decoration: line-through;
-	border-width: 5px;
-	border: thin;
-	transition: border-width 0.6s linear;
+	opacity:100%;
+}
+
+.caption2 {
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.caption2 span {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #FFFFFF;
+	color: #000000;
+	font-family: sans-serif;
+	font-size: 10px;
+	letter-spacing: 0.8px;
+	line-height: 1.5;
+	border: 1px solid;
+	padding: 6px;
+	opacity: 0%;
+}
+.caption2 
+.col-4 a:visited .caption2 {
+	
+
+}
+.col-4 a:hover .caption2 {}
+.col-4 a:hover .caption2 span {
+	opacity:100%;
 }
 /************************************************
 Responsives
@@ -219,16 +256,17 @@ Responsives
 
 	a:link {
 		color: black;
-		/*text-decoration: underline;*/
+			/*text-decoration: underline;
+		text-decoration: underline;*/
 	}
 	/* visited link */
 	a:visited {
 		color: black;
-		text-decoration: line-through;
+		
 	}
 	/* mouse over link */
 	a:hover {
-		text-decoration: line-through;
+		
 	}
 	/* selected link */
 	a:active {}
@@ -265,7 +303,7 @@ Responsives
 	}
 	.floating {
 		animation-name: floating;
-		animation-duration: 3s;
+		animation-duration: 5s;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease-in-out;
 		margin-left: 30px;
